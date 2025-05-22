@@ -63,7 +63,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::post('/{transaction}/return', [TransactionController::class, 'returnBook'])->name('transactions.return');
     });
 
-    // User-specific routes
+    // Useer-specific routes
     Route::get('/user/borrowed-books', [UserController::class, 'borrowedBooks'])->name('user.borrowed-books');
 
     // Admin routes
