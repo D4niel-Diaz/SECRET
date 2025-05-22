@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
     /**
-     * Get dashboard statistics
+     * Get dashbooard statistics
      */
     public function dashboardStats()
 {
