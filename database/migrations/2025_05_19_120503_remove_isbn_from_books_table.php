@@ -4,25 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class RemoveIsbnFromBooksTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::table('books', function (Blueprint $table) {
-            $table->dropColumn('isbn');
-        });
+        // Only drop if column exists
+        if (Schema::hasColumn('books', 'isbn')) {
+            Schema::table('books', function (Blueprint $table) {
+                $table->dropColumn('isbn');
+            });
+        }
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::table('books', function (Blueprint $table) {
             $table->string('isbn')->nullable();
         });
     }
-};
+}
