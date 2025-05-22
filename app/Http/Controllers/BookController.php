@@ -306,7 +306,7 @@ class BookController extends Controller
             'data' => $data,
         ], $status);
     }
-
+//
     /**
      * Return a standard error JSON response.
      */
