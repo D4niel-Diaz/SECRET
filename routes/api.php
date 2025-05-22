@@ -23,7 +23,7 @@ Route::get('/status', function () {
     ]);
 });
 
-
+// 
 Route::get('/sanctum/csrf-cookie', function (Request $request) {
     return response()->noContent();
 });
