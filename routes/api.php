@@ -14,7 +14,7 @@ use App\Http\Controllers\AdminController;
 | API Routes
 |--------------------------------------------------------------------------
 */
-
+//
 Route::get('/status', function () {
     return response()->json([
         'status' => 'operational',
