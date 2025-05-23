@@ -14,7 +14,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://iptfinal.netlify.app/',
+        '*',
     ],
 
     'allowed_origins_patterns' => [],
