@@ -1,11 +1,21 @@
 <?php
 
 return [
-    'paths' => ['sanctum/csrf-cookie', 'login', 'register', 'logout'],
+
+    'paths' => [
+        'api/*',
+        'sanctum/csrf-cookie',
+        'auth/*',
+        'login',
+        'register',
+        'logout',
+    ],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://iptfinal.netlify.app'],
+    'allowed_origins' => [
+        'https://iptfinal.netlify.app/',
+    ],
 
     'allowed_origins_patterns' => [],
 
@@ -17,5 +27,4 @@ return [
 
     'supports_credentials' => true,
 ];
-
 
